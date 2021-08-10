@@ -27,11 +27,12 @@ function setup() {
   bow = createSprite(380,220,20,50);
   bow.addImage(bowImage); 
   bow.scale = 1;
-  score = 0;
+  
 }
 
 function draw() {
  background(0);
+ text("score: "+score,270,30);
   // moving ground
     scene.velocityX = -3 
 
@@ -65,7 +66,7 @@ function draw() {
       pinkBalloon();
     }
   }
-  text("score: "+score,270,30);
+  
   drawSprites();
 }
 
@@ -118,6 +119,6 @@ function pinkBalloon() {
   pink.addImage(pink_balloonImage);
   pink.velocityX = 3;
   pink.lifetime = 150;
-  pink.scale = 0.1;
+  pink.scale = 1;
 
 }
